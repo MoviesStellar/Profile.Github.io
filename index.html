@@ -1,39 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Canvas Example</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VysakhTG</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+    <div id="particles"></div>
 
-  <script>
-    window.requestAnimFrame = (
-      window.requestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.oRequestAnimationFrame ||
-      window.msRequestAnimationFrame ||
-      function (callback) {
-        window.setTimeout(callback);
-      }
-    );
+    <header>
+        <div class="container">
+            <ul class="header-logo">
+                <li><a href=""><h1>Vysakh</h1><img src="favicon.ico" alt="logo"></a></li>
+            </ul>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#about">ᴀʙᴏᴜᴛ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    function init(elemid) {
-      let canvas = document.getElementById(elemid),
-        c = canvas.getContext("2d"),
-        w = (canvas.width = window.innerWidth),
-        h = (canvas.height = window.innerHeight);
-      c.fillStyle = "rgba(30, 30, 30, 1)";
-      c.fillRect(8, 8, w, h);
-      return { c: c, canvas: canvas };
-    }
+    <section class="hero">
+        <div class="container">
+            <img src="assets/img/profile.jpg" alt="vysakh logo" class="prof-img">
+            <h1>Vysakh</h1>
+            <ul class="hero-links">
+                <li><a target="_blank" href="https://telegram.dog/VysakhTG"><i class="fab fa-telegram"></i></a></li>
+                <li><a target="_blank" href="https://github.com/VysakhTG"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Hi, I am Vysakh 👀</h2>
+            <h3>Nothing to be specifically noted about me.</h3>
+        </div>
+    </section>
 
-    window.onload = function () {
-      let c = init("canvas").c,
-        canvas = init("canvas").canvas,
-        w = (canvas.width = window.innerWidth),
-        h = (canvas.height = window.innerHeight);
-    };
-  </script>
+    <footer>
+        <p><small>&copy; 2022 Vʏsᴀᴋʜ ᡧ. All Rights Reserved.</small></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/part-conf.js"></script>
+    <script src="assets/js/writer.js"></script>
 </body>
 </html>
